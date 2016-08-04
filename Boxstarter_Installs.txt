@@ -1,0 +1,25 @@
+﻿Install-BoxstarterPackage -PackageName 7zip.install
+Install-BoxstarterPackage -PackageName adobereader
+Install-BoxstarterPackage -PackageName flashplayeractivex
+Install-BoxstarterPackage -PackageName javaruntime
+Install-BoxstarterPackage -PackageName googlechrome
+Install-BoxstarterPackage -PackageName dotnet4.6.1
+Install-BoxstarterPackage -PackageName powershell
+Install-BoxstarterPackage -PackageName autoruns
+Install-BoxstarterPackage -PackageName procmon
+Install-BoxstarterPackage -PackageName procexp
+
+Set-WindowsExplorerOptions -DisableShowHiddenFilesFoldersDrives -DisableShowProtectedOSFiles -EnableShowFileExtensions
+
+Enable-RemoteDesktop
+
+Update-ExecutionPolicy -policy Unrestricted
+
+Enable-MicrosoftUpdate
+
+CINST TelnetClient -source windowsFeatures
+CINST SNMP -source windowsFeatures
+CINST WMISnmpProvider -source windowsFeatures
+CUNINST WindowsGadgetPlatform -source windowsFeatures
+
+Install-WindowsUpdate -acceptEula -getUpdatesFromMS
