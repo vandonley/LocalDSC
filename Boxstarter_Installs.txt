@@ -20,6 +20,7 @@ Enable-MicrosoftUpdate
 CINST TelnetClient -source windowsFeatures
 CINST SNMP -source windowsFeatures
 CINST WMISnmpProvider -source windowsFeatures
+CINST Server-RSAT-SNMP -source windowsFeatures
 CUNINST WindowsGadgetPlatform -source windowsFeatures
 
 Install-WindowsUpdate -acceptEula -getUpdatesFromMS
