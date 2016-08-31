@@ -116,3 +116,4 @@ WindowsFeature TIFFIFilter
     Name = "TIFFIFilter"    
     Ensure = "Present"
 }
+}
